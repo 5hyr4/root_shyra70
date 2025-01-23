@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #5E657B;
+}
+
+
+header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: #ffc252;
+    font-family: 'Slackey';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    /* identical to box height, or 45px */
+    text-shadow: 2px 2px rgb(0, 0, 0); letter-spacing: 5px; 
+    letter-spacing: -0.011em;
+    padding: 20px;
+    
+}
+
+h3 {
+    font-family: 'Krona One'; color: #ffc252; text-shadow: 1px 1px rgb(13, 14, 31);
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Krona One'; color: #ffc252; text-shadow: 1px 1px rgb(13, 14, 31);
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+
+img {
+    width: 100%;
+    border: 6px solid white;
+    box-shadow: 2px 3px 3px black;
+    background-color: white;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(31, 35, 61);
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding: 20px;
+}
+figcaption {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(31, 35, 61);
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+#gallery{
+    background-color: rgb(240 240 240 / .75);
+    display: grid;
+    gap: 1.44rem;
+}
+
+#gallery img{
+    aspect-ratio: 16/9;
+    object-fit: fill;
+}
+
+#gallery2{
+    background-color: rgb(240 240 240 / .75);
+    display: grid;
+    gap: 1.44rem;
+}
+
+#gallery2 img{
+    aspect-ratio: 16/9;
+    object-fit: fill;
+}
+
+#gallery3 img{
+    aspect-ratio: 4/3;
+    object-fit: fill;
+}
+
+#gallery3{
+    background-color: rgb(240 240 240 / .75);
+    display: grid;
+    gap: 1.44rem;
+}
+
+
+@media screen and (min-width: 490px) {
+    #gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 490px) {
+    #gallery2{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 490px) {
+    #gallery3{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+nav {
+    background-color: rgb(240 240 240 / .75);
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.44rem;
+}
+
+nav a {
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #993431;
+    text-decoration: none;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: #993431;
+    color: rgb(243, 217, 201);
+}
+
+ footer {
+    padding-top: 1090px;
+ }

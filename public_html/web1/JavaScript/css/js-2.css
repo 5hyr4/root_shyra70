@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+}
+
+#star-five {
+    top: 50px;
+    left: 50px;
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+    transition: all 0.4s ease-in;
+  }
+  
+  #star-five:before {
+    border-bottom: 80px solid red;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  #star-five:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+  #star-five.change-me{
+    border-color: blue transparent;
+    /*left: 300px;*/
+    /*translate: 300px; */
+    transform: translateX(300px) translateY(200px) scale(2.4) rotate(33deg) skewX(2deg);
+  }
+
+  #star-five.change-me:before{
+    border-color:transparent transparent blue;
+  }
+  

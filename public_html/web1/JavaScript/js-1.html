@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Demo 1</title>
+    <style>
+        body{background-color: #92563c;}
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Demo 1</h1>
+
+    <main id="content">loading</main>
+
+    <button onclick="eatPizza()">Click Me!</button>
+
+    <audio src="sounds/sunflower-street.mp3"></audio>
+    
+
+    <script>
+        alert("Hello World");
+        console.log("Page loaded successfully");
+
+        // Variables 
+        //dynamic variable type "let" (data can be changed)
+
+        let myName = "Shyra";
+
+        myName = "Mhae";
+
+        console.log(myName);
+
+        // constant varable (data can;t be changed)
+        const pi = 3.14159;
+
+        console.log(pi * 5);
+
+        /// mixed essag logging 
+        // uses + concatenate strings with other strings or data
+        // Strings = textuale data, in quotes
+
+        console.log("Pi times 5" + pi*5);
+
+        let mySound = new Audio("sounds/sunflower-street.mp3");
+
+        const myContent = document.getElementById
+        ("content");
+
+        
+
+        function eatPizza() {
+            alert("Omnomnom 🍕");
+            mySound.play();
+            myContent.innerHTML = '<h2>Omnomnom 🍕</h2><img src="https://cdn.pixabay.com/animation/2023/09/26/13/00/13-00-38-486_512.gif" width=250px/>'
+        }
+        
+
+
+
+
+    </script>
+
+   
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 | My Character</title>
+   <link rel="stylesheet" href="css/app.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>The Sleeepy Robot</h1>
+    <img src="img/sleepy-robot.svg" alt="">
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab corrupti quo similique, facilis rerum vel cupiditate eaque nostrum voluptate, fugit ad ex modi tenetur quam vero natus at commodi culpa.</p>
+    
+    <div id="panel">click to open</div>
+
+    <h3>The Design Process</h3>
+    <img classs="screenshots" src="img/sleepy_robot.png" alt="">
+    <img classs="screenshots" src="img/sleepy-robot-final.png" alt="">
+<br>
+    <button id="game" onclick="top.location.href = '../project3/index.html'">Play Game!</button>
+
+    <script>
+
+        const panel = document.getElementById("panel");
+        const sound = new Audio("sounds/robot-noises.mp3");
+
+        panel.onclick = function() {
+            this.classList.toggle("slide-up");
+            sound.play();
+
+        }
+
+
+    </script>
+</body>
+</html>

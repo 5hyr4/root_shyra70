@@ -1,0 +1,55 @@
+*
+{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #5E657B;
+    }
+
+
+    header {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #ffc252;
+        font-family: 'Slackey';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        /* identical to box height, or 45px */
+        text-shadow: 2px 2px rgb(0, 0, 0);
+        letter-spacing: 5px;
+        letter-spacing: -0.011em;
+        padding: 30px;
+
+    }
+        nav {
+            background-color: rgb(240 240 240 / .75);
+            padding: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.44rem;
+        }
+    
+        nav a {
+            font-family: 'Krona One';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #993431;
+            text-decoration: none;
+            text-shadow: 1px 1px rgb(0, 0, 0);
+            text-align: center;
+        }
+    
+        nav a:hover {
+            background-color: #993431;
+            color: rgb(243, 217, 201);
+        }
+
+     footer {
+         padding-top: 1090px;
+            }

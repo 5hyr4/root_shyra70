@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    display: inline-block;
+    unicode-bidi: isolate;
+}
+
+
+html {
+    overflow-x: hidden;
+    background-color: #2f3846;
+}
+
+body {
+    text-align: center;
+    perspective: 350px;
+    padding: 50px;
+    font-family: "Dokdo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+   
+}
+div {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #E75234;
+    text-shadow: 1px 1px 1px black;
+}
+
+h1 {
+    font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+        font-size: 40px;
+     
+        padding-top: 100px;
+        color: #E75234;
+        text-shadow: 1px 1px 1px black;
+      
+}
+
+h3 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  
+          font-size: 20px;
+       
+          padding-bottom: 30px;
+          color: #E75234;
+          text-shadow: 1px 1px 1px black;
+}
+
+
+p {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #E8E4C7;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+img {
+    width: 250px;
+    padding-top: 10px;
+    
+}
+
+#panel {
+    /* align-content: center; */
+    padding-top: 30%;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #96ADD6;
+    transition: all 0.5s ease-in;
+    transform-style: preserve-3d;
+}
+#panel.slide-up {
+    /* transform: translateY(-50%) rotateX(70deg); */
+    transform: translateY(-110vh);
+}
+
+.screenshots {
+    width: 25%;
+    display: inline-block;
+} 
+
+#game {
+    font-family: "Press Start 2P", system-ui;
+    padding: 10px 30px;
+    font-size: 1em;
+    background: #F7EFB1;
+    border-radius: 20px;
+    border: none;
+    box-shadow:10px 10px 20px black ;
+    cursor: pointer;
+    display: inline-block;
+    color: #E75234;
+    
+}
+#game:hover {
+    font-family: "Press Start 2P", system-ui;
+    background-color:#E75234;
+    rotate: 180deg;
+    color: #F7EFB1;
+}
+
+
+
+

@@ -1,0 +1,47 @@
+body {
+    background-color: #5E657B;
+}
+
+h1 {
+font-family: 'Slackey';
+font-style: normal;
+font-weight: 400;
+font-size: 50px;
+line-height: 150%;
+text-align: center;
+/* identical to box height, or 45px */
+text-shadow: 2px 2px rgb(0, 0, 0); letter-spacing: 5px; 
+letter-spacing: -0.011em;
+
+color:  #ffc252;
+}
+
+a {
+    font-size: 40px;
+    color: #F1E6D2;
+}
+
+a:hover {
+    background-color: #993431;
+    color: rgb(255, 255, 255);
+    rotate: 2deg;
+}
+
+p {
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    padding: 10px;
+    position: relative; margin: 0 auto;
+    /* or 27px */
+    
+    letter-spacing: -0.011em;
+    color: #F1E6D2; text-shadow: 2px 2px rgb(0, 0, 0); 
+}
+
+pre {
+text-align: center;
+}
