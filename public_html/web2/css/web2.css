@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 24px;
+    line-height: 1.44;
+    height: 100%;
+    font-family: "Funnel sans", sans-serif;
+    font-style: normal;
+  }
+  
+  body {
+    background-color: #5E657B;
+    font-family: "Funnel Sans", serif;
+    min-height: 110vh;  
+    color: rgb(240 240 240 /1);
+  }
+
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content:right;
+    margin: 1.44rem;
+  }
+  
+  nav a:link {
+    color: #F1E6D2;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  
+  nav a:visited {
+    color: #F1E6D2;
+    transition: color 0.25s;
+  }
+  
+  nav a:hover {
+    color: #993431;
+    transition-duration: 0.5s;
+  }
+  
+
+/* HEADER */
+h1 {
+  text-align: left;
+  font-size: 76px;
+  margin-left: 1.5rem;
+  font-weight: 900;
+  color: #ffc252;
+  text-shadow: 1px 1px rgb(0, 0, 0); 
+}
+
+h2 {
+  text-align: left;
+  font-size: 48px;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  color: #ffc252;
+}
+
+/* CUSTOM BREAK */
+
+.custom-br {
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  height: 1.5px;
+  background-color: #ffffff; /*change color*/
+  margin-top: 2.5rem;
+}
+
+/* EXERCISES */
+
+h3 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #F1E6D2;
+}
+
+/* EXERCISES */
+
+#exercises {
+  text-align: left;
+  margin: 1.5rem;
+}
+
+#exercises a {
+  color: #F1E6D2;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+  transition-duration: 0.4s;
+}
+
+#exercises a {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#exercises a:hover {
+
+  color: #993431;
+}
+
+#exercises{
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content:right;
+    margin: 1.44rem;
+  }
+  
+  footer a:link {
+    color: #F1E6D2;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  
+  footer a:visited {
+    color: #F1E6D2;
+    transition: color 0.25s;
+  }
+  
+  footer a:hover {
+    color: #993431;
+    transition-duration: 0.5s;
+  }

@@ -1,0 +1,15 @@
+/* TRANSITIONS.CSS */
+
+a:link {
+    transition: color 0.5;
+}
+
+img {
+    opacity: 0.25;
+    transition: opacity 500ms;
+    width: 300px;
+}
+
+img:hover {
+opacity: 1;
+}

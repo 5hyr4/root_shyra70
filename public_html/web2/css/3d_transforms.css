@@ -1,0 +1,16 @@
+#platform {
+    width: 200px;
+    width: 200px;
+    height: 350px;
+    background-color: rgba(192, 255, 243, 0.458);
+    transform: translate(100px) rotateX(55deg) rotateZ(45deg);
+    border-radius: 16px;
+    box-shadow: 1px 2px 10px rgba(10, 96, 80, 0.458), 44px 44px 24px rgba(24, 195, 163, 0.458);
+    transition: 0.5s ease-in-out transform, 0.5s ease-in-out box-shadow;
+}
+
+#platform:hover {
+    transform: translateX(100px) translateY(-24px) rotateX(55deg) rotateZ(45deg);
+    box-shadow:1px 2px 10px rgba(10, 96, 80, 0.458), 70px 70px 24px rgba(24, 195, 163, 0.458);
+}
+
