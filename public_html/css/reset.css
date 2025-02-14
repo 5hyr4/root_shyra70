@@ -45,12 +45,7 @@
 
   header {
     background-color: #F7F7F7;
-    padding-top: 150px;
-  }
-
-  main {
-    padding-top: 100px;
-    
+    padding: 100px;
   }
 
   
@@ -69,28 +64,18 @@
   }
   
   h1,
-  h2 {
-    font-family: "Baskervville", serif;
-    font-weight: 400;
-    font-style: italic;
-    text-align: center;
-    font-size: 60px;
-    
-  }
-  
+  h2,
   h3,
   h4 {
-  
+
     font-family: "Roboto", serif;
-    font-size: 20px;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
     
     color: #2b2b2c;
-    text-align: center;
   }
   
   figcaption {
@@ -99,7 +84,7 @@
     font-size: 0.833rem;
     color: #2b2b2c;
   }
-  
+
   /* NAV */
   nav ul {
     list-style-type: none;
@@ -109,7 +94,7 @@
     overflow: hidden;
     background-color:#D1EBFF;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     position: fixed;
     top: 0;
     width: 100%;
@@ -136,6 +121,8 @@
     text-decoration: none;
 }
   
+
+  
   img, video {
     max-width: 100%;
     height: auto;
@@ -155,7 +142,6 @@
 
   footer {
     background-color: #D1EBFF;
-    margin-bottom: 0 ;
   }
   
   

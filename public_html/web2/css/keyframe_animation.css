@@ -1,0 +1,30 @@
+img{
+    width: 150px;
+}
+
+#bunny:hover {
+    animation: skatingAround ;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes skatingAround {
+0%{
+    transform: translateX(0px);
+}
+48%{
+    transform: translateX(600px);
+}
+50%{
+    transform: rotateY(180deg) translateX(-600px);
+}
+98% {
+    transform: translateX(0px) rotateY(180deg);
+}
+100% {
+
+    transform: translateX(0px);
+}
+}
