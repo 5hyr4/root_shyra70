@@ -8,9 +8,38 @@ img {
     opacity: 0.25;
     transition: opacity 500ms;
     width: 300px;
+    display: block;
+    margin: auto;
+   
     
 }
 
 img:hover {
 opacity: 1;
+}
+
+/*CHALLENGE*/
+
+figure img {
+    position: absolute ;
+
+}
+
+figure {
+    width: 300px;
+    display: block;
+    margin: auto; 
+}
+figure .visible {
+
+    opacity: 1;
+}
+
+figure .hidden {
+    opacity: 0;
+}
+
+figure:hover .hidden {
+    opacity: 1;
+
 }

@@ -94,7 +94,7 @@
     overflow: hidden;
     background-color:#D1EBFF;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     position: fixed;
     top: 0;
     width: 100%;
