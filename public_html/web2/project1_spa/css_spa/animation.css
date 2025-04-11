@@ -1,0 +1,195 @@
+/* PLOT */
+
+a:link {
+    transition: color 0.5;
+}
+
+figure .itsv {
+    opacity: 0.25;
+    transition: opacity 500ms;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+figure .itsv:hover {
+opacity: 1;
+transform: scale(1.1);
+}
+
+figure .atsv {
+    opacity: 0.25;
+    transition: opacity 500ms;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+figure .atsv:hover {
+opacity: 1;
+transform: scale(1.1);
+}
+
+
+/* CHARACTERS */
+/* spider-men */
+
+#cards {
+    display: grid;
+    margin: auto;
+    text-align: center;
+    gap: 1.44rem;
+
+    overflow: hidden;
+    text-decoration: none;
+
+
+  }
+  
+  #cards a {
+    overflow: hidden;
+    text-decoration: none;
+    
+  }
+  
+  #cards img {
+    /*opacity: .5;*/
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center center;
+    transition: opacity 0.5s;
+  }
+ 
+  
+  #cards p{
+    opacity: 0;
+    transition: 1.0s;
+  }
+  
+  
+  #cards figure{
+    position: relative;
+  }
+  
+
+  
+  #cards .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  #cards a:hover .top{
+    opacity: color 1s;
+  }
+  
+  #cards a:hover h3, #cards a:hover p {
+    opacity: 1;
+  }
+  
+  #cards section{
+    transform: translateY(4rem);
+    transition: transform 0.25s;
+  }
+  
+  #cards a:hover section{
+    transform: translateY(0);
+  }
+  
+  #cards a:hover .top{
+    top:0;
+    opacity: 1;
+  }
+
+/* CHARACTERS */
+  /* villains */
+  #villains {
+    transition: transform 0.5s;
+    
+}
+
+  #villains :hover {
+  transform: scale(1.1);
+}
+
+
+
+
+  /* SOUNDTRACK */
+
+
+  #soundtracks img {
+    width: 25%;
+   
+  }
+
+
+  #itsv_album:hover {
+    animation: moveRight ;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+
+  }
+
+
+  @keyframes moveRight {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(120%);
+    }
+    
+    }
+
+  #atsv_album:hover {
+      animation: moveLeft ;
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes moveLeft {
+      0%{
+          transform: translateX(0%);
+      }
+      100%{
+          transform: translateX(-120%);
+      }
+      
+      }
+
+      #soundtracks img {
+        width: 100%;
+        z-index: 1; /* Keep the image in front */
+    }
+  
+
+.album-text {
+
+  position: relative;
+  top: -50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 8s ease-in;
+  transition: opacity .5s ease-out;
+  z-index: 0; /* Ensure text starts behind the image */
+}
+
+/* Reveal the text when hovering over the images */
+#itsv_album:hover + .album-text,
+#atsv_album:hover + .album-text {
+    opacity: 1;
+    z-index: 2; /* Bring text to the front when the image moves */
+}
+
+
+
+  
+  

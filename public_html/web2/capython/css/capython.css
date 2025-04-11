@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F5F5DC;
+    height: 100%;
+    display: grid;
+    margin: auto;
+    text-align: left;
+}
+
+header {
+    padding-top: 6%;
+    padding-bottom: 3%;
+    text-align: center;
+    background-color: #ededb8;
+
+}
+
+        /* Mobile */
+        @media screen and (max-width: 1200px) {
+          header {
+            padding-top: 15%;
+            padding-bottom: 3%;
+          }
+
+}
+
+
+
+
+
+
+/* NAV */
+nav ul {
+    font-size: medium;
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow: hidden;
+    background-color:#92A834;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  nav li a {
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal; 
+    line-height: 150%;
+    color: #F5F5DC;
+    text-decoration: none;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    text-align: center;
+
+    font-size: 25px;
+
+    transition-duration: 0.2s;
+  }
+  
+  
+  nav a:hover {
+    color: #DC84E9;
+    text-decoration: none;
+
+}
+
+
+
+
+/* FONTS */
+h1 {
+    font-family: "Patrick Hand", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 250%;
+    color: #DC84E9;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+     
+}
+
+h2 {
+    font-family: "Patrick Hand", cursive;
+    font-weight: bold;
+    font-style: normal; 
+    color: #DC84E9;
+
+    font-size: 30px;
+
+    padding-top: 2%;
+    padding-left: 3%;
+
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    
+}
+
+h3 {
+    font-family: "Patrick Hand", cursive;
+    font-weight: bold;
+    font-style: normal; 
+    color: #476161;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    font-size: 25px;
+
+    padding-top: 3%;
+
+  padding-left: 2%;
+  }
+
+  p {
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 2%; 
+    padding-bottom: 1%;
+    font-size: large;
+  }
+
+  ul li {
+    font-family: "Patrick Hand", cursive;
+    font-weight: bold;
+    font-style: normal; 
+    padding-left: 2%;
+    font-size: large;
+  }
+
+  
+  #description {
+    background-color: #F5F5DC;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  #solution {
+    background-color: #f3f3ca;
+
+  }
+
+  #final {
+    background-color: #F5F5DC;
+  }
+
+  /* PROCESS */
+
+
+
+  .full-body {
+        
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 1fr;
+
+    width: 32.75%;
+
+    border: 5px solid #476161;
+    
+  }
+
+  #expression-sheet {
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 0.8rem;
+
+    padding: 2%;
+
+  }
+
+  #expression-sheet img{
+    width: 100%;
+
+    border: 5px solid #476161;
+
+  }
+
+  #color-choices {
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 2%;
+
+  }
+  #color-choices img {
+    width: 100%;
+
+    border: 5px solid #476161;
+  }
+
+
+  /* FINAL */
+
+  #exp-sheet-final {
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 0.8rem;
+    padding: 2%;
+    padding-top: 1rem;
+
+  }
+
+  #exp-sheet-final img {
+    width: 100%;
+
+    border: 5px solid #476161;
+
+  }
+
+  #pose {
+    display: grid;
+    margin: auto;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.8rem;
+
+    padding: 2%;
+
+  }
+
+  #pose img {
+  width: 100%;  
+
+  border: 5px solid #476161;
+}
+
+@media screen and (min-width: 1000px) {
+  #color-choices {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+
+footer nav{
+  list-style-type: none;
+  margin: 0;
+
+  padding: 20px;
+  overflow: hidden;
+  background-color:#92A834;
+  display: grid;
+  bottom: 0;
+  grid-template-columns: 1fr 1fr;
+
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+}
+
+footer a {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal; 
+  line-height: 150%;
+  color: #F5F5DC;
+  text-decoration: none;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+  text-align: center;
+
+  font-size: 25px;
+
+  transition-duration: 0.2s;
+
+
+}
+
+  
+footer a:hover {
+  color: #DC84E9;
+  text-decoration: none;
+
+}

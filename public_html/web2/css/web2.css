@@ -17,6 +17,16 @@ h1 {
       font-size:60px; 
 }
 
+
+    
+      /* Mobile */
+      @media screen and (max-width: 480px) {
+        h1, h2 {
+            font-size: 40px;
+        }
+
+}
+
 h2 {
   font-family: "Baskervville", serif;
   font-weight: 400;
@@ -122,5 +132,16 @@ main {
  {
   transform: scale(1.015);
 }
+
+    
+      /* Mobile */
+      @media screen and (max-width: 480px) {
+        h1 {
+            font-size: 50px;
+        }
+
+}
+
+
 
 

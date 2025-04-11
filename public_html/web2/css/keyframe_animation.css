@@ -11,20 +11,20 @@ img{
 }
 
 @keyframes skatingAround {
-0%{
-    transform: translateX(0px);
+    0%{
+        transform: translateX(0px);
+    }
+    48%{
+        transform: translateX(600px);
+    }
+    50% {
+        transform: rotateY(180deg) translateX(-600px);
+    }
+    98% {
+        transform: translate(0px) rotateY(180deg);
+    }
+    100% {
+        transform: translateX(0px);
+    }
 }
-48%{
-    transform: translateX(600px);
-}
-50%{
-    transform: rotateY(180deg) translateX(-600px);
-}
-98% {
-    transform: translateX(0px) rotateY(180deg);
-}
-100% {
 
-    transform: translateX(0px);
-}
-}

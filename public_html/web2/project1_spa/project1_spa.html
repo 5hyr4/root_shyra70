@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1 - SPA</title>
 
+    <link rel="stylesheet" href="css_spa/spa.css">
+    <link rel="stylesheet" href="css_spa/animation.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Slackey&display=swap" rel="stylesheet">
 
 
     
@@ -19,122 +25,214 @@
             <li><a href="#soundtracks">Soundtracks</a></li>
         </ul>
     </nav>
-</section>
+    </section>
+
     <header>
-        <h1>The Spider-verse</h1>
+        <h1>THE SPIDER-VERSE MOVIES</h1>
     </header>
 
     <main>
+      <article>
         <section id="intro">
-            <h2>Introducing 'The Spider-verse' movies</h2>
+            <h2 class="h2-intro">Introducing 'The Spider-verse' movies</h2>
            
-            <p></p>
-
+            <p class="p-intro">The Spider-verse movies are one of my favourite animated movies. The artstyle, the characters, the soundtracks and of course the classic Spider-man plot with its own twist makes these movies very enjoyable to watch.</p>
         </section>
+      </article>
 
-
+      <article>            
         <section id="plot">
-            <h2>Plot summary</h2>
+          <h2>Plot summary</h2>
 
-            <figure>
-                <img src="images/itsv.png" alt="">
-                <img src="images/btsv.png" alt="">
+            <figure id="movie-posters">
+                <img src="images/itsv1.png" alt="" class="itsv">
+                <img src="images/astv1.png" alt="" class="atsv">
             </figure>
 
-            <p></p>
-
+            <p>There are currently two movies in The Spider-verse trilogy that are published, the first movie 'Into the Spider-verse' and the second movie 'Accross the Spider-verse'. In the first movie, we are introduced to Miles Morales, an ordinary high school boy attending Visions Academy. When he was hanging out with his uncle Aaron adding graffiti on the walll of a sewer, he gets bitten by a radioactive spider and it all begins from there. Due to a mahcine activated by Kingpin and Octavia, the villains, Spider-Men from other universes get sucked into Miles' reality. We follow Miles adapting to his new powers, overcoming struggles, exeriencing growth and forming new friends. In the second movie, the story develops further on Miles'developpement as the new Spider-Man. He receives an unexpected visit from an old friend from another dimension, Gwen Stacy. We then learn about a Spider Society run by Miguel Ohara where we meet more Spider-Men.</p>
         </section>
-
+      </article>
         
-<section id="cards">
+     
 
         <section id="characters">
-            <h2>Characters</h2>
+          <h2>Characters</h2>
 
-            
-                <a href="#">
+        <article>           
+        <section id="cards">
+
+            <div class="miles">
+            <section>
+                <a href="#characters">
                   <article>
                     <figure>
-                <img src="images/miles_morales.png" alt="">
-                <img src="images/spider_miles.png" alt="">
+                <img src="images/miles_morales1.png" alt="">
+                <img src="images/spider_miles1.png" class="top" alt="">
                     </figure>
 
-                    <section>
-                      <p>Miles Morales</p>
+                    <section class="text">
+                      <h3>Miles Morales</h3>
+                      <p>Morales was born and raised in Brooklyn, New York City. In the first movie, he was 13 and in the second, he is 15 years old. He is the son of an African American father and an Afro-Puerto Rican mother. Axel Alonso has described Miles as an intelligent nerd with an aptitude for science similar to his predecessor, Peter Parker.</p>
                     </section>
                   </article>
                 </a>
-
-                
-                <a href="#">
-                    <article>
-                      <figure>
-                  <img src="images/gwen_stacy.png" alt="">
-                  <img src="images/spider_gwen.png" alt="">
-                      </figure>
-  
-                      <section>
-                        <p>Gwen Stacy</p>
-                      </section>
-                    </article>
-                  </a>
-
-
-                  <a href="#">
-                    <article>
-                      <figure>
-                  <img src="images/peter_parker.png" alt="">
-                  <img src="images/spider_peter.png" alt="">
-                      </figure>
-  
-                      <section>
-                        <p>Peter Parker</p>
-                      </section>
-                    </article>
-                  </a>
-
-
-                  <a href="#">
-                    <article>
-                      <figure>
-                  <img src="" alt="">
-                  <img src="" alt="">
-                      </figure>
-  
-                      <section>
-                        <p>Hobie</p>
-                      </section>
-                    </article>
-                  </a>
-
-
-                  <a href="#">
-                    <article>
-                      <figure>
-                  <img src="" alt="">
-                  <img src="" alt="">
-                      </figure>
-  
-                      <section>
-                        <p>Gwen Stacy</p>
-                      </section>
-                    </article>
-                  </a>
-
+            </section>
+            </div>
             
+              <h2>Other Spider-Men & Women</h2>
+
+          <section id="spider-container">
+
+                <a href="#spider-container">
+                    <article>
+                      <figure>
+                  <img src="images/gwen_stacy1.png" alt="">
+                  <img src="images/spider_gwen1.png" class="top" alt="">
+                      </figure>
+  
+                      <section>
+                        <h3>Gwen Stacy</h3>
+                      </section>
+                    </article>
+                  </a>
+
+                  <a href="#spider-container">
+                    <article>
+                      <figure>
+                  <img src="images/peter_parker1.png" alt="">
+                  <img src="images/spider_peter1.png" class="top" alt="">
+                      </figure>
+  
+                      <section>
+                        <h3>Peter Parker</h3>
+                      </section>
+                    </article>
+                  </a>
+
+
+                  <a href="#spider-container">
+                    <article>
+                      <figure>
+                  <img src="images/hobie_brown1.png" alt="">
+                  <img src="images/spider_hobie1.png" class="top" alt="">
+                      </figure>
+  
+                      <section>
+                        <h3>Hobie Brown</h3>
+                      </section>
+                    </article>
+                  </a>
+
+
+                  <a href="#spider-container">
+                    <article>
+                      <figure>
+                  <img src="images/pavitr1.png" alt="">
+                  <img src="images/spider_pavitr1.png" class="top" alt="">
+                      </figure>
+  
+                      <section>
+                        <h3>Pavitr Prabhakar</h3>
+                      </section>
+                    </article>
+                  </a>
+                  </section>
+
+                </section>
+              </article>
+                  
+                <h2 class="h2-villains">Villains</h2>
+
+            <section id="villains">
+
+              <article>
+                <img src="images/kingpin.png" id="villains" alt="">
+
+                <section>
+                  <h3>Kingpin</h3>
+                </section>
+              </article>
+
+              <article>
+                <img src="images/octavia.png" id="villains" alt="">
+
+                <section>
+                  <h3>Octavia</h3>
+                </section>
+              </article>
+
+              <article>
+                <img src="images/prowler.png" id="villains" alt="">
+
+                <section>
+                  <h3>Prowler</h3>
+                </section>
+              </article>
+
+              <article>
+                <img src="images/spot.png" id="villains" alt="">
+
+                <section>
+                  <h3>The Spot</h3>
+                </section>
+              </article>
+
+              </section>
+
 
         </section>
+      </article>
+    
 
-        <section id="soundtracks">
-            <h2>Soundtracks</h2>
+      <article>            
 
-            <figure>
-                <img src="" alt="">
-                <img src="" alt="">
-            </figure>
-
+          <section id="soundtracks">
+           <h2>Soundtracks (my fav songs)</h2>
+           <div class="album"> 
+           <h3>Spider_Man: Into the Spider-Verse</h3>
+                <img src="images/itsv_album.png" id="itsv_album" alt="">
+                <div class="album-text" id="itsv_text">
+                  
+                  <ol>
+                    <li>Sunflower by Post Malone, Swae Lee</li>
+                    <li>Scared of the Dark by Lil Wayne, Ty Dolla $ign, XXXTENTACION</li>
+                    <li>Invincible by Aminé</li>
+                  </ol>
+                </div>
+        
+        </div>
+        <div class="album">
+          <h3>Spider_Man: Across the Spider-Verse</h3>
+                  <img src="images/atsv_album.png" id="atsv_album" alt="">
+                  <div class="album-text" id="atsv_text">
+                  
+                    <ol>
+                      <li>Annihilate by Metro Boomin, Swae Lee, Lil Wayne, Offset</li>
+                      <li>Calling by Metro Boomin, Swae Lee, NAV, A Boogie Wit da Hoodie</li>
+                      <li>Self Love by Metro Boomin, Coi Leray</li>
+                    </ol>
+                  </div>
+              </div>
         </section>
+      </article>
+
+      <article>
+        <section id="sunflower">
+          <h2 class="h2-intro">The End</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ApXoWvfEYVU?si=uM8VF3JSBjdZswq8" frameborder="0" allow="acceler"></iframe>
+        </section>
+      </article>
     </main>
+
+    <footer>
+      <nav>
+       
+        <a href="https://582helvetica.com/">582helvetica.com</a>
+        <a href="https://shyra70.582helvetica.com/index.html">Shyra</a>
+    
+    </nav>
+    </footer>
+
     
 </body>
 </html>
