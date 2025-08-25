@@ -34,12 +34,10 @@ main {
 /* PROJECTS */
 
 #projects a {
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 
       
     text-align: center;
@@ -57,8 +55,8 @@ main {
 
 #projects nav a {
   text-decoration: none;
-  margin-right: 5rem;
-  margin-left: 5rem;
+  margin-right: 20rem;
+  margin-left: 20rem;
 }
 
 
@@ -77,6 +75,7 @@ main {
   background-color: #D1EBFF;
   border: 3px solid #D1EBFF;
   color: #2b2b2c;
+  text-decoration: underline;
 }
 
 #prjects {
@@ -92,13 +91,15 @@ main {
 
 #et1, 
 #pc1,
-#web1, #web2 {
+#web1, #web2,
+#capython {
   transition: transform 0.3s;
 }
 
 #et1:hover, 
 #pc1:hover,
-#web1:hover, #web2:hover {
+#web1:hover, #web2:hover,
+#capython:hover {
   transform: scale(1.015);
 }
 
@@ -133,10 +134,10 @@ main {
 
 
       /* Mobile */
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 1500px) {
         #projects nav a {
-          margin-right: 1rem;
-          margin-left: 1rem;
+          margin-right: 0.5rem;
+          margin-left: 0.5rem;
 
         }
 

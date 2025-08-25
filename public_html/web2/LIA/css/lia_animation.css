@@ -1,0 +1,104 @@
+/*ABOUT - our story*/
+
+#outer_box img {
+    transition: transform 0.5s;
+}
+
+#inner_box img{
+    transition: transform 0.5s;
+}
+#outer_box img:hover {
+    transform: rotate(180deg);
+}
+
+#inner_box img:hover {
+    transform: scale(1.1);
+}
+
+/*ABOUT - the speaker*/
+#box_to_speaker figure img {
+    position: absolute ;
+
+}
+
+#box_to_speaker figure {
+    display: block;
+    margin: auto; 
+}
+#box_to_speaker figure .visible {
+    opacity: 1;
+}
+
+#box_to_speaker figure .hidden {
+    
+    opacity: 0;
+}
+
+#box_to_speaker figure:hover .hidden {
+    opacity: 1;
+
+}
+/*#box_to_speaker1 img {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#box_to_speaker1 .visible {
+    opacity: 1;
+}
+
+#box_to_speaker1 .hidden {
+    opacity: 0;
+    transform: translateY(40%);
+
+}
+
+#box_to_speaker1:hover .hidden {
+    opacity: 1;
+}
+
+#box_to_speaker1:hover .visible {
+    opacity: 0.2;
+}
+
+/*COLORS*/
+.accordion {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    margin: 5% auto 0;
+    box-sizing: border-box;
+}
+
+.accordion:hover .active {
+    flex-basis: 10%;
+}
+
+.image-box {
+    margin: 0 1%;
+    flex-grow: 1;
+    flex-basis: 0;
+    transition: .5s;
+}
+
+.image-box img {
+    object-fit: cover;
+    transition: .5s;
+    width: 100%;
+}
+
+.image-box:hover {
+    flex-basis: 10%;
+}
+
+.image-box:nth-child(1):hover {
+    flex-basis: 10%;
+}
+
+/*PRODUCT*/
+
+
+
+
