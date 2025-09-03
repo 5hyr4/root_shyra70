@@ -49,6 +49,10 @@
     cursor: pointer;
 }
 
+#message img { 
+    max-width: 50vmin;
+}
+
 
 
 
