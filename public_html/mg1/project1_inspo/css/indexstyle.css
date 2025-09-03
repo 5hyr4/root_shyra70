@@ -78,7 +78,7 @@ main {
   text-decoration: underline;
 }
 
-#projects {
+#prjects {
   margin-top: 3rem;
   margin-bottom: 5rem;
 }
@@ -91,17 +91,16 @@ main {
 
 #et1, 
 #pc1,
-#web1, #web2, #web3,
-#capython,
-#mg1 {
+#web1, #web2,
+#capython {
   transition: transform 0.3s;
 }
 
 #et1:hover, 
 #pc1:hover,
-#web1:hover, #web2:hover,#web3:hover,
-#capython:hover, #mg1:hover {
-  transform: scale(1.02);
+#web1:hover, #web2:hover,
+#capython:hover {
+  transform: scale(1.015);
 }
 
 
