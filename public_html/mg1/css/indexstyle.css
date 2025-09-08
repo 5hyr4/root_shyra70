@@ -12,7 +12,7 @@ h1 {
   font-weight: 300;
   font-style: italic;
   text-align: center;
-  font-size: 60px;
+  font-size: 12vw;
   
 }
 
@@ -21,8 +21,8 @@ h2 {
   font-weight: 300;
   font-style: italic;
   text-align: center;
-  font-size: 60px;
-    font-size: 40px;
+  font-size: 8vw;
+
 }
 
 main {
@@ -38,13 +38,11 @@ main {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-
-      
     text-align: center;
     margin: 1.44rem;
     display: block;
     padding: .5rem .5rem;
-    font-size: larger;
+    font-size: 4vw;
   
 }
 
@@ -55,8 +53,6 @@ main {
 
 #projects nav a {
   text-decoration: none;
-  margin-right: 20rem;
-  margin-left: 20rem;
 }
 
 
@@ -65,16 +61,15 @@ main {
     background-color: #D1EBFF;
   border:3px solid #D1EBFF;
   border-radius: 8px;
-  color: #fffdfd;
-  margin: 2rem 2rem;
+  color: #4c6a81;
   transition-duration: 0.3s;
 }
 
 
 #projects a:hover {
   background-color: #D1EBFF;
-  border: 3px solid #D1EBFF;
-  color: #2b2b2c;
+  border: 3px solid #f65707;
+  color: #f65707;
   text-decoration: underline;
 }
 
@@ -98,42 +93,52 @@ main {
 }
 
 
-    
-      /* Mobile */
-      @media screen and (max-width: 480px) {
-        h1 {
-            font-size: 50px;
-        }
-
-}
- 
-      /* Mobile */
-      @media screen and (max-width: 480px) {
-        h2 {
-            font-size: 30px;
-        }
-
-}
 
       /* Mobile */
-      @media screen and (max-width: 480px) {
+      @media screen and (min-width: 480px) {
         #projects a {
-          font-size: medium;
-          border:1px solid #D1EBFF;
-          color: #fffdfd;
-          margin: 1rem 1rem;
+          font-size: 2.8vw;
+          margin: 1rem;
+          font-size: 2vw;
+          
+        }
+
+}
+
+      /* Mobile */
+      @media screen and (min-width: 1000px) {
+        #projects a {
+          margin-right: 10rem;
+          margin-left: 10rem;
         }
 
 }
 
 
       /* Mobile */
-      @media screen and (max-width: 1500px) {
+      @media screen and (min-width: 480px) {
         #projects nav a {
-          margin-right: 0.5rem;
-          margin-left: 0.5rem;
+          align-items: center;
 
         }
 
 }
+
+      /* Mobile */
+      @media screen and (min-width: 480px) {
+        h1 {
+          font-size: 5vw;
+        }
+
+}
+
+      /* Mobile */
+      @media screen and (min-width: 480px) {
+        h2 {
+          font-size: 6vw;
+        }
+
+}
+
+
 
