@@ -1,18 +1,25 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Life Savers", serif;
+    font-weight: 800;
+    font-style: normal;
     text-align: center;
     color: #F0E7D5;
+    background-color: #212842;
 }
 
 .background {
-    background-color: #212842;
     height: 100vh;
     padding-top: 1px;
 }
 
-.display {
+.titre {
+    padding-top:10%;
+    font-size: 150%;
+}
+
+.gagnant {
     color: white;
     font-size: 25px;
     text-align: center;
@@ -20,8 +27,11 @@
     margin-bottom: 1em;
 }
 
-.hide {
-    display: none;
+
+.case {
+    border-radius: 10px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 #grille {
@@ -29,12 +39,12 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    max-width: 300px;
+    max-width: 320px;
 }
 
 #grille .case:hover {
-    background-color: coral;
-    opacity: .5;
+    background-color: rgb(219, 153, 250);
+    opacity: .3;
 }
 
 #grille .case {
@@ -45,7 +55,6 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
     cursor: pointer;
     background-size: contain;
 }
@@ -54,8 +63,18 @@
     max-width: 15vmin;
 }
 
+.controls {
+    padding: 5%;
+}
+
 #replay {
+    font-size: 120%;
     color: #212842;
+    background-color: #F0E7D5;
+    border: 3px;
+    border-radius: 4px;
+    padding: 1%;
+    cursor: pointer;
 }
 
 

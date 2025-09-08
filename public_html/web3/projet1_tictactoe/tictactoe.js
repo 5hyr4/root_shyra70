@@ -2,7 +2,7 @@
 let cases = document.querySelectorAll(".case");
 let replayBtn = document.querySelector("#replay");
 let panneauMessage = document.querySelector("#message");
-let panneauMessageGagnant = document.querySelector("#message img")
+let panneauMessageGagnant = document.querySelector("#message img");
 
 let joueurX = true;
 let gagnant = '';
@@ -44,15 +44,14 @@ const valide = function () {
        // let val1 = cases[patron[0]].innerText;
        // let val2= cases[patron[1]].innerText;
        // let val3= cases[patron[2]].innerText;
-       let val1 = cases[patron[0]].style.backgroundImage.slice(5,10);
-       let val2 = cases[patron[1]].style.backgroundImage.slice(5,10);
-       let val3 = cases[patron[2]].style.backgroundImage.slice(5,10);
+       let val1 = cases[patron[0]].style.backgroundImage.slice(5,14);
+       let val2 = cases[patron[1]].style.backgroundImage.slice(5,14);
+       let val3 = cases[patron[2]].style.backgroundImage.slice(5,14);
 
         if (val1 &&
             val1 === val2 &&
             val1 === val3) {
                 console.log(`Le gagnant est ${val1}`);
-                console.log(panneauMessageGagnant);
                 panneauMessageGagnant.src = val1;
                 for (let boite of cases) {
                     boite.active = false;
@@ -60,8 +59,6 @@ const valide = function () {
             }
     }
 }
-
-
 
 
 replayBtn.addEventListener("click", function () {
