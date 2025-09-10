@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 50px;
+}
+h1 {
+  font-family: "Cardo", serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  font-size: 12vw;
+  
+}
+
+h2 {
+  font-family: "Cardo", serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  font-size: 8vw;
+
+}
+
+main {
+    background-color: #F7F7F7;
+}
+
+#links {
+    display: grid;
+    margin: auto;
+    place-items: center;
+}
+
+
+      /* Mobile */
+      @media screen and (min-width: 480px) {
+        h1 {
+          font-size: 5vw;
+        }
+
+}
+
+      /* Mobile */
+      @media screen and (min-width: 480px) {
+        h2 {
+          font-size: 4vw;
+        }
+
+}
+
+
+

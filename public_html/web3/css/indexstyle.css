@@ -100,7 +100,7 @@ main {
         #projects a {
           font-size: 2.8vw;
           margin: 1rem;
-          font-size: 2vw;
+          font-size: 1.6vw;
           
         }
 
@@ -128,7 +128,7 @@ main {
       /* Mobile */
       @media screen and (min-width: 480px) {
         h1 {
-          font-size: 5vw;
+          font-size: 4vw;
         }
 
 }
@@ -136,7 +136,7 @@ main {
       /* Mobile */
       @media screen and (min-width: 480px) {
         h2 {
-          font-size: 6vw;
+          font-size: 3vw;
         }
 
 }
