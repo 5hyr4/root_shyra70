@@ -68,8 +68,36 @@ body {
     background-size: contain;
 }
 
-#message img { 
-    max-width: 15vmin;
+#message { 
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 10vh;
+    border-radius: 10px;
+    background: hsla(9, 58%, 53%, 0.917);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #F0E7D5 ;
+    text-shadow: hsl(0, 0%, 0%) 3px 3px;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
+}
+
+
+#message.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#message p {
+    text-align: center;
+    align-self: center;
 }
 
 .controls {
@@ -77,13 +105,14 @@ body {
 }
 
 #replay {
-    font-size: 120%;
+    font-size: 150%;
     color: #212842;
     background-color: hsl(9, 76%, 60%);
     border: 3px;
     border-radius: 5px;
     padding: 1%;
     cursor: pointer;
+    margin-top: 6vh;
 }
 
 #replay {
@@ -96,7 +125,18 @@ body {
 }
 
 
+/* Mobile */
+      @media screen and (min-width: 480px) {
+        #message {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    height: 20vh;
 
+        }
 
+}
 
 

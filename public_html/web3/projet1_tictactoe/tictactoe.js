@@ -40,6 +40,14 @@ for (let boite of cases) {
 }
 
 const valide = function () {
+
+        let victoire = false;
+    
+        let isTie = Array.from(cases).every(boite => !boite.active);
+            if (isTie && !victoire) {
+                showPanneauMessageGagnant("Partie nulle");
+            }
+
     for (let patron of patrons) {
        // let val1 = cases[patron[0]].innerText;
        // let val2= cases[patron[1]].innerText;
@@ -51,10 +59,20 @@ const valide = function () {
         if (val1 &&
             val1 === val2 &&
             val1 === val3) {
-                console.log(`Le gagnant est ${val1}`);
-                panneauMessageGagnant.src = val1;
-                for (let boite of cases) {
-                    boite.active = false;
+                
+            let gagnant = "";
+            if (val1.includes("e.png")) {
+                gagnant = "e";
+                showPanneauMessageGagnant("Étoile a gagné!");
+                
+            } else {
+                gagnant = "m";
+                showPanneauMessageGagnant("Méduse a gagné!");
+            }
+    
+            for (let boite of cases) {
+                boite.active = false;
+            
                 }
             }
     }
@@ -67,7 +85,28 @@ replayBtn.addEventListener("click", function () {
         boite.style.backgroundImage = "";
         joueurX = true;
     }
+    hidePanneauMessageGagnant();
 });
+
+function showPanneauMessageGagnant(text) {
+    message.textContent = text;
+    message.classList.remove("hidden");
+  }
+
+function hidePanneauMessageGagnant() {
+    message.classList.add("hidden");
+  }
+
+// Partie nulle:
+function replayGame() {
+    for (let boite of cases) 
+      boite.active = true;
+      boite.style.backgroundImage = "";
+    }
+
+  // Hide overlay just in case
+  hidePanneauMessageGagnant();
+
 
 
 
