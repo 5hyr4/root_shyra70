@@ -7,14 +7,6 @@
 main {
     padding: 50px;
 }
-h1 {
-  font-family: "Cardo", serif;
-  font-weight: 300;
-  font-style: italic;
-  text-align: center;
-  font-size: 12vw;
-  
-}
 
 h2 {
   font-family: "Cardo", serif;
@@ -26,9 +18,25 @@ h2 {
 }
 
 main {
-    background-color: #F7F7F7;
+    background-color: #FFFDF7;
 }
 
+
+/* mg video */
+
+
+#mg-video {
+  display: grid;
+  width: 60.5vw;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+
+}
 
 
 /* PROJECTS */
@@ -58,7 +66,7 @@ main {
 
 
 #projects a{
-    background-color: #D1EBFF;
+  background-color: #D1EBFF;
   border:3px solid #D1EBFF;
   border-radius: 8px;
   color: #4c6a81;

@@ -8,18 +8,89 @@
     color: #F0E7D5;
 }
 
-body {
-    background-color: #212842;
-    background-image: url(./img/background.png);
-    background-size: cover;
-    background-blend-mode: normal;
-    background-repeat: no-repeat;
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+/*svg background*/
+
+  .st0 {
+    fill: #394989;
+  }
+
+  .st1 {
+    fill: #2c3868;
+  }
+
+  .st2 {
+    stroke: #7f90d4;
+    stroke-width: 10px;
+  }
+
+  .st2, .st3, .st4 {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .st3 {
+    stroke: #4a5fb1;
+    stroke-width: 20px;
+  }
+
+  .st4 {
+    stroke: #394989;
+    stroke-width: 3px;
+  }
+
+  .st5 {
+    fill: #7f90d4;
+  }
+
+  .st6 {
+    fill: #4a5fb1;
+  }
+
+/*game*/
+body {
+    background-color: #212842;
+    
+
+}
+
+svg {
+    left: 0;
+    z-index: -1; /* keeps it in the background */
+    position: fixed;   /* stays in place even on scroll */
+    height: auto;
+    bottom: 0;
+  }
   
-.background {
-    height: 100vh;
-    padding-top: 1px;
+
+
+/*animation styles */
+
+
+#purple1{
+    animation: wavemaker 38s ease-in-out infinite alternate-reverse;
+}
+#purple2{
+    animation: wavemaker 38s ease-in-out infinite alternate;
+}
+
+#purple4{
+    animation: wavemaker 40s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes wavemaker {
+    0% {
+        transform: translateX(-1vw);
+    }
+    100% {
+        transform: translateX(-11vw);
+    }
 }
 
 .titre {
@@ -70,22 +141,21 @@ body {
 
 #message { 
     position: fixed;
-    top: 20%;
+    top: 31.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40vw;
-    height: 10vh;
-    border-radius: 10px;
-    background: hsla(9, 58%, 53%, 0.917);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: hsla(235, 53%, 55%, 0.917);
     display: grid;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     color: #F0E7D5 ;
     text-shadow: hsl(0, 0%, 0%) 3px 3px;
     text-align: center;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: opacity 0.3s ease;
 }
 
@@ -100,10 +170,6 @@ body {
     align-self: center;
 }
 
-.controls {
-    padding: 5%;
-}
-
 #replay {
     font-size: 150%;
     color: #212842;
@@ -112,7 +178,7 @@ body {
     border-radius: 5px;
     padding: 1%;
     cursor: pointer;
-    margin-top: 6vh;
+    margin-top: 5vh;
 }
 
 #replay {
@@ -132,11 +198,24 @@ body {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20vw;
-    height: 20vh;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    font-size: 2rem;
 
         }
 
+}
+
+/* Mobile */
+@media screen and (min-width: 480px) {
+    .background {
+        margin-top: -60vh;
+        background-size: cover;
+        background-blend-mode: normal;
+        background-repeat: no-repeat;
+    }
+    
 }
 
 
