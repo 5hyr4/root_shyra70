@@ -10,7 +10,7 @@ document.querySelector("#gameBox").appendChild(canvas);
 // Image d'arrière-plan
 var bgReady = false;
 var bgImage = new Image();
-bgImage.src = "images/background.png";
+bgImage.src = "images/game_background.png";
 bgImage.onload = function () {
     bgReady = true; 
 };
@@ -26,7 +26,7 @@ winImage.onload = function () {
 // Image du joueur
 var playerReady = false;
 var playerImage = new Image(); 
-playerImage.src = "images/player.png"; 
+playerImage.src = "images/somnia_fairy.png"; 
 playerImage.onload = function () {
     playerReady = true; 
 };
@@ -34,7 +34,7 @@ playerImage.onload = function () {
 // Image des goodies
 var goodyReady = false;
 var goodyImage = new Image(); 
-goodyImage.src = "images/goody.png"; 
+goodyImage.src = "images/luminae.png"; 
 goodyImage.onload = function () {
     goodyReady = true; 
 };
