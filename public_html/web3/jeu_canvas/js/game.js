@@ -5,6 +5,17 @@ canvas.width = document.documentElement.clientWidth;
 canvas.height = document.documentElement.clientHeight;
 document.querySelector("#gameBox").appendChild(canvas);
 
+// === Helper: check if screen is desktop ===
+function isDesktop() {
+    return window.innerWidth >= 1024;
+}
+
+// === Resize canvas and re-init game state ===
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init(); // re-center player and goodies
+}
 
 //Charger les sprites
 // Image d'arrière-plan
@@ -12,9 +23,8 @@ var bgReady = false;
 var bgImage = new Image();
 bgImage.src = "images/game_background.png";
 bgImage.onload = function () {
-    bgReady = true; 
+	bgReady = true; 
 };
-
 // Estampe gagnant
 var winReady = false;
 var winImage = new Image(); 
@@ -39,18 +49,31 @@ goodyImage.onload = function () {
     goodyReady = true; 
 };
 
+ // Image des baddies
+ var badReady = false;
+ var badImage = new Image();
+ badImage.src = "images/nocturns.png";
+ badImage.onload = function () {
+     badReady = true;
+ };
+ 
+
 
 // Créer des objets de jeu globaux 
 var player = {
     speed : 5, // mouvement en pixels par tick 
-    width: 32,
-    height: 32
+    width: 90,
+    height: 100
 };
 
 var goodies = [ // ceci est un tableau (array)
-    { width: 32, height: 32 }, // un goody
-    { width: 32, height: 32 }, // deux goodies
-    { width: 32, height: 32 }  // trois goodies
+    { width: 50, height: 70 }, // un goody
+    { width: 50, height: 70 }, // deux goodies
+    { width: 50, height: 70 }  // trois goodies
+];
+
+var bad = [
+    { width: 50, height: 70, x: 0, y: 0, speed: 2 }
 ];
 
 
@@ -116,6 +139,18 @@ var init = function () {
     player.x = (canvas.width - player.width) / 2; 
     player.y = (canvas.height - player.height) / 2;
 
+      // properly randomize each bad's position
+    for (var i in bad) {
+        bad[i].x = Math.random() * (canvas.width - bad[i].width);
+        bad[i].y = Math.random() * (canvas.height - bad[i].height);
+
+        // Keep enemy at least 200px away from player
+        while (Math.abs(bad[i].x - player.x) < 200 && Math.abs(bad[i].y - player.y) < 200) {
+            bad[i].x = Math.random() * (canvas.width - bad[i].width);
+            bad[i].y = Math.random() * (canvas.height - bad[i].height);
+        }
+    }
+
     //Placez des goodies à des endroits aléatoires 
     for (var i in goodies) {
         goodies[i].x = (Math.random() * (canvas.width - goodies[i].width));
@@ -158,6 +193,22 @@ var main = function () {
             }
         }
 
+        for (var i in bad) {
+            var dx = player.x - bad[i].x;
+            var dy = player.y - bad[i].y;
+            var distance = Math.sqrt(dx * dx + dy * dy);
+        
+            if (distance > 0) {
+                bad[i].x += (dx / distance) * bad[i].speed;
+                bad[i].y += (dy / distance) * bad[i].speed;
+            }
+        }
+
+// Check if baddie touches player
+if (checkCollision(player, bad[i])) {
+    gameOver();
+    return;
+}
         render();
         window.requestAnimationFrame(main);
     }
@@ -176,6 +227,10 @@ var render = function () {
     if (goodyReady)
         for (var i in goodies) {
         ctx.drawImage(goodyImage, goodies[i].x, goodies[i].y);
+    }
+    if (badReady)
+        for (var i in bad) {
+        ctx.drawImage(badImage, bad[i].x, bad[i].y);
     }
 
     //Label
