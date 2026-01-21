@@ -85,14 +85,15 @@ main {
 #pc1,
 #web1, #web2, #web3,
 #capython,
-#mg1 {
+#mg1, #web4, #et3, #va2 {
   transition: transform 0.3s;
 }
 
 #et1:hover, 
 #pc1:hover,
 #web1:hover, #web2:hover,#web3:hover,
-#capython:hover, #mg1:hover {
+#capython:hover, #mg1:hover,
+#web4:hover, #et3:hover, #va2:hover {
   transform: scale(1.02);
 }
 

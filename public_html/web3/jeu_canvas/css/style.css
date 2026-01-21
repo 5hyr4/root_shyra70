@@ -30,3 +30,94 @@ right:0px;
 height: 100%; 
 }
 
+#landingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('images/landing.png') no-repeat center center;
+    background-size: contain; /* scale to fit while keeping aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    z-index: 9999;
+  }
+  
+  #landingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #474583; /* optional fallback */
+  }
+  
+  #landingImage {
+    max-width: 90%;   /* fits inside screen width */
+    max-height: 80%;  /* fits inside screen height */
+    object-fit: contain;
+  }
+  
+  
+  #startBtn {
+    padding: 4px 12px;
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    font-style: normal;
+  
+    font-size: 40px;
+    cursor: pointer;
+    border: 1px solid #faa6ba;
+    border-radius: 12px;
+    background-color: #faa6ba;
+    color: #fcf5f0;
+    transition: transform 0.2s ease;
+    
+  }
+  
+  #startBtn:hover {
+    background-color: #e65375;
+    color: #f9f1f1;
+    border: 1px solid #e65375;
+
+    transform: scale(1.05);
+  }
+  
+  
+
+#restartBtn {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    background-color: #faa6ba;
+    color: #f9f1f1;
+    border: 1px solid #faa6ba;
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    padding: 8px 20px;
+    border: 1px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+
+#restartBtn:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    background-color: #e65375;
+    color: #f9f1f1;
+    border: 1px solid #e65375;
+}
+

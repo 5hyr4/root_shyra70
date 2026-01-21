@@ -5,6 +5,10 @@ canvas.width = document.documentElement.clientWidth;
 canvas.height = document.documentElement.clientHeight;
 document.querySelector("#gameBox").appendChild(canvas);
 
+var gameState = "playing"; // can be "playing", "won", or "lost"**
+var restartBtn = document.getElementById("restartBtn");
+
+
 // === Helper: check if screen is desktop ===
 function isDesktop() {
     return window.innerWidth >= 1024;
@@ -33,6 +37,14 @@ winImage.onload = function () {
     winReady = true; 
 };
 
+// Estampe perdant
+var loseReady = false;
+var loseImage = new Image(); 
+loseImage.src = "images/lose.png"; 
+loseImage.onload = function () {
+    loseReady = true; 
+};
+
 // Image du joueur
 var playerReady = false;
 var playerImage = new Image(); 
@@ -56,14 +68,93 @@ goodyImage.onload = function () {
  badImage.onload = function () {
      badReady = true;
  };
- 
+
+ // === GAME STATE CONTROL ===
+var gameState = "playing"; // "playing", "won", or "lost"
+var restartBtn = document.getElementById("restartBtn");
+
+// Restart button click
+restartBtn.addEventListener("click", function() {
+    if (gameState === "won" || gameState === "lost") {
+
+        goodies = [
+            { width: 50, height: 70 },
+            { width: 50, height: 70 },
+            { width: 50, height: 70 }
+        ];
+        
+        bad = [
+            { width: 50, height: 70, x: 0, y: 0, speed: 2 }
+        ];
+        
+        // reset state
+        gameState = "playing";
+        restartBtn.style.display = "none";
+
+        // clear the previous win/lose overlay
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // reset everything and restart loop
+        init();
+        window.requestAnimationFrame(main);
+    }
+});
+
+
+// Game Over screen
+function gameOver() {
+    gameState = "lost";
+    restartBtn.style.display = "block";
+
+    // Dim background
+    ctx.fillStyle = "rgba(0,0,0,0.6)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Show lose image
+    if (loseReady && loseImage.complete) {
+        var scale = 0.8;
+        var imgW = loseImage.width * scale;
+        var imgH = loseImage.height * scale;
+        ctx.drawImage(
+            loseImage,
+            (canvas.width - imgW) / 2,
+            (canvas.height - imgH) / 2,
+            imgW,
+            imgH
+        );
+    }
+}
+
+// Win screen
+function winScreen() {
+    gameState = "won";
+    restartBtn.style.display = "block";
+
+    // Dim background
+    ctx.fillStyle = "rgba(0,0,0,0.6)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Show win image
+    if (winReady && winImage.complete) {
+        var scale = 0.8;
+        var imgW = winImage.width * scale;
+        var imgH = winImage.height * scale;
+        ctx.drawImage(
+            winImage,
+            (canvas.width - imgW) / 2,
+            (canvas.height - imgH) / 2,
+            imgW,
+            imgH
+        );
+    }
+}
 
 
 // Créer des objets de jeu globaux 
 var player = {
     speed : 5, // mouvement en pixels par tick 
-    width: 90,
-    height: 100
+    width: 100,
+    height: 110
 };
 
 var goodies = [ // ceci est un tableau (array)
@@ -133,6 +224,7 @@ addEventListener("touchstart", function (e) {
 });
 
 
+
 //Définir l'état initial
 var init = function () {
     //Mettre le joueur au centre
@@ -158,61 +250,80 @@ var init = function () {
     }
 };
 
+var landingScreen = document.getElementById("landingScreen");
+var startBtn = document.getElementById("startBtn");
+
+function startGame() {
+    landingScreen.style.display = "none"; // hide landing page
+    gameState = "playing";
+    init();
+    window.requestAnimationFrame(main);
+}
+
+// Click to start
+startBtn.addEventListener("click", startGame);
+
+// Optional: start with spacebar
+document.addEventListener("keydown", function(e) {
+    if (landingScreen.style.display !== "none" && e.code === "Space") {
+        startGame();
+    }
+});
 
 
 // La boucle de jeu principale
 var main = function () {
     if (checkWin()) {
-        //GAGNANT Afficher le cadre
-        if (winReady) {
-            ctx.drawImage(winImage, (canvas.width - winImage.width)/2, 
-                (canvas.height - winImage.height)/2);
+        winScreen();
+        return;
+    }
+
+    if (gameState !== "playing") {
+        return; // stop the game loop when not playing
+    }
+
+    // Player movement
+    if (player.x > 0 && player.x < canvas.width - player.width) {
+        player.x += vX;
+    } else {
+        player.x -= vX;
+        vX = -vX; // bounce
+    }
+
+    if (player.y > 0 && player.y < canvas.height - player.height) {
+        player.y += vY;
+    } else {
+        player.y -= vY;
+        vY = -vY; // bounce
+    }
+
+    // Check collisions
+    for (var i in goodies) {
+        if (checkCollision(player, goodies[i])) {
+            goodies.splice(i, 1);
         }
     }
-    else {
-        //Pas encore gagné, jouer le jeu
-        //déplacer le joueur
-        if (player.x > 0 && player.x < canvas.width - player.width) {
-            player.x += vX;
-        }
-        else {
-            player.x -= vX;
-            vX = -vX; //bounce
-        }
-        if (player.y > 0 && player.y < canvas.height - player.height) {
-            player.y += vY
-        }
-        else {
-            player.y -= vY;
-            vY = -vY; //bounce
-        }
-        //vérifier les collisions
-        for (var i in goodies) {
-            if (checkCollision(player,goodies[i])) {
-                goodies.splice(i,1);
-            }
+
+    for (var i in bad) {
+        var dx = player.x - bad[i].x;
+        var dy = player.y - bad[i].y;
+        var distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance > 0) {
+            bad[i].x += (dx / distance) * bad[i].speed;
+            bad[i].y += (dy / distance) * bad[i].speed;
         }
 
-        for (var i in bad) {
-            var dx = player.x - bad[i].x;
-            var dy = player.y - bad[i].y;
-            var distance = Math.sqrt(dx * dx + dy * dy);
-        
-            if (distance > 0) {
-                bad[i].x += (dx / distance) * bad[i].speed;
-                bad[i].y += (dy / distance) * bad[i].speed;
-            }
+        if (checkCollision(player, bad[i])) {
+            gameOver();
+            return;
         }
-
-// Check if baddie touches player
-if (checkCollision(player, bad[i])) {
-    gameOver();
-    return;
-}
-        render();
-        window.requestAnimationFrame(main);
     }
+
+    render();
+    window.requestAnimationFrame(main);
 };
+
 
 
 // Dessinez le tout
@@ -235,7 +346,8 @@ var render = function () {
 
     //Label
     ctx.fillStyle = "rgb(250, 250, 250)";
-    ctx.fillText("Goodies restants : "+goodies.length, 32, 32);};
+    ctx.font="18pt Helvetica";
+    ctx.fillText("Luminae restants : "+goodies.length, 30, 45);};
 
 //Fonction générique pour vérifier les collisions 
 var checkCollision = function (obj1,obj2) {
@@ -257,7 +369,3 @@ var checkWin = function () {
     }
 };
 
-
-//Démarrer le jeu
-init();
-window.requestAnimationFrame(main);
