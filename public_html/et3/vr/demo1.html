@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  <a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+      <a-box position="-1 0.41969 -3" rotation="0 45 0" color="#4CC3D9" material="color: #ffea9e" scale="0.8 0.8 0.8"></a-box>
+      <a-sphere position="0 1.20503 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.54545 -2.88147" radius="0.5" height="1.5" color="#FFC65D" material="color: #6b97ff" scale="0.7 0.7 0.7"></a-cylinder>
+      
+      
+  <a-assets>
+    <img id="sky" src="img/sky.jpg">
+  </a-assets>
+  <a-sky src="#sky" scale="-1.84 1.59 1" position="0.5581 0.24957 0"></a-sky>
+
+  <a-box position="-0.834 2.1312 -5.415" animation="dur: 2000; easing: linear; loop: true; property: position; to: 1 8 -10" color="tomato"></a-box>
+
+
+      <a-assets>
+  <img id="texture" src="img/ocean.jpg">
+</a-assets>
+<a-cone src="#texture" position="0 0.56423 -1.85762"></a-cone>
+
+<a-gltf-model src="models/Untitled.glb"></a-gltf-model>
+    </a-scene>
+  </body>
+</html>
