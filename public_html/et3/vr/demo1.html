@@ -2,10 +2,10 @@
   <head>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   <a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
-      <a-box position="-1 0.41969 -3" rotation="0 45 0" color="#4CC3D9" material="color: #ffea9e" scale="0.8 0.8 0.8"></a-box>
-      <a-sphere position="0 1.20503 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.54545 -2.88147" radius="0.5" height="1.5" color="#FFC65D" material="color: #6b97ff" scale="0.7 0.7 0.7"></a-cylinder>
-      
+    <a-cone src="#texture" position="-0.0035 0.56423 -1.85762" scale="0.62 0.62 0.62"></a-cone>  
+    <a-box cursor-listener position="-1.69425 0.41969 -3.61262" rotation="0 45 0" color="#4CC3D9" material="color: #ffea9e" scale="0.8 0.8 0.8"></a-box>    
+    <a-sphere position="-1.09196 1.20503 -5.06629" radius="1.25" color="#EF2D5E" scale="0.62 0.62 0.62"></a-sphere>
+<a-cylinder position="1.53642 0.54545 -2.88147" radius="0.5" height="1.5" color="#FFC65D" material="color: #6b97ff" scale="0.52 0.52 0.52"></a-cylinder>      
       
   <a-assets>
     <img id="sky" src="img/sky.jpg">
@@ -20,7 +20,31 @@
 </a-assets>
 <a-cone src="#texture" position="0 0.56423 -1.85762"></a-cone>
 
-<a-gltf-model src="models/Untitled.glb"></a-gltf-model>
-    </a-scene>
+<a-gltf-model src="models/finalhouse2.gltf" position="2.17503 0 -4.04912" rotation="0 -90 0"></a-gltf-model>
+
+<a-entity camera look-controls wasd-controls>
+  <a-entity cursor="fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat">
+  </a-entity>
+</a-entity>
+
+</a-scene>
   </body>
+
+<script>
+  AFRAME.registerComponent('cursor-listener', {
+  init: function () {
+    var lastIndex = -1;
+    var COLORS = ['red', 'green', 'blue'];
+    this.el.addEventListener('click', function (evt) {
+      lastIndex = (lastIndex + 1) % COLORS.length;
+      this.setAttribute('material', 'color', COLORS[lastIndex]);
+      console.log('I was clicked at: ', evt.detail.intersection.point);
+    });
+  }
+});
+
+</script>
 </html>
